@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package echo;
+
+import "google/protobuf/empty.proto";
+
+service EchoServer {
+  rpc Echo (google.protobuf.Empty) returns (EchoReply) {}
+}
+
+
+// The response message containing the greetings
+message EchoReply {
+  string response = 1;
+}
